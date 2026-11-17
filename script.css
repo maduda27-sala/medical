@@ -1,0 +1,283 @@
+/* IDENTIDADE VISUAL */
+:root {
+    --rosa: #EBCBD0;
+    --rosa-escuro: #C99CA7;
+    --bege: #F1E5D5;
+    --off-white: #FFFCF9;
+    --marrom: #806C68;
+    --areia: #E8DAD0;
+    --texto: #5F514E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--off-white);
+    color: var(--texto);
+    font-family: 'Lato', sans-serif;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: var(--off-white);
+}
+
+.logo {
+    color: var(--marrom);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 29px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: var(--marrom);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--rosa-escuro);
+}
+
+/* APRESENTAÇÃO */
+.inicio {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 70px 10%;
+    background-color: var(--bege);
+}
+
+.inicio-texto {
+    max-width: 540px;
+}
+
+.etiqueta {
+    color: var(--rosa-escuro);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.inicio h1 {
+    color: var(--marrom);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 5vw, 60px);
+    line-height: 1.1;
+    margin: 22px 0;
+    font-weight: 500;
+}
+
+.inicio-texto p {
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: var(--rosa-escuro);
+    color: white;
+    padding: 15px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: var(--marrom);
+    transform: translateY(-3px);
+}
+
+.inicio-imagem {
+    width: 43%;
+}
+
+.inicio-imagem img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 180px 180px 15px 15px;
+}
+
+/* SOBRE */
+.sobre {
+    padding: 100px 15%;
+    text-align: center;
+}
+
+.sobre h2,
+.explorar h2,
+.curiosidade h2 {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--marrom);
+    font-size: 43px;
+    font-weight: 500;
+    margin: 18px 0;
+}
+
+.sobre p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 2;
+    font-size: 16px;
+}
+
+/* EXPLORAÇÃO */
+.explorar {
+    padding: 80px 10%;
+    text-align: center;
+    background-color: #F8F1EB;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+    text-align: left;
+}
+
+.card {
+    background-color: var(--off-white);
+    padding: 35px 28px;
+    border-radius: 12px;
+    border: 1px solid var(--areia);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(128, 108, 104, 0.10);
+}
+
+.card-numero {
+    color: var(--rosa-escuro);
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.card h3 {
+    color: var(--marrom);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    margin: 18px 0 12px;
+}
+
+.card p {
+    line-height: 1.8;
+    font-size: 14px;
+    min-height: 75px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--rosa-escuro);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* CURIOSIDADE */
+.curiosidade {
+    margin: 80px 10%;
+    padding: 65px 10%;
+    text-align: center;
+    background-color: var(--bege);
+    border-radius: 15px;
+}
+
+.curiosidade p {
+    line-height: 1.9;
+    max-width: 650px;
+    margin: auto;
+}
+
+/* RODAPÉ */
+footer {
+    padding: 45px 20px;
+    text-align: center;
+    background-color: var(--marrom);
+    color: white;
+}
+
+footer h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 13px;
+    line-height: 2;
+}
+
+.creditos {
+    margin-top: 15px;
+    opacity: 0.7;
+}
+
+/* ADAPTAÇÃO PARA CELULARES */
+@media (max-width: 768px) {
+
+    .cabecalho {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .inicio {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 7%;
+    }
+
+    .inicio-imagem {
+        width: 100%;
+    }
+
+    .inicio-imagem img {
+        height: 300px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre {
+        padding: 70px 8%;
+    }
+
+    .explorar {
+        padding: 65px 7%;
+    }
+
+    .curiosidade {
+        margin: 50px 6%;
+        padding: 45px 7%;
+    }
+}
